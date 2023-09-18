@@ -7,43 +7,6 @@ class Calcs:
     def __init__(self):
         None
 
-    def ArithmeticAverage(self):
-        summation = 0
-        for i in self.dataBase:
-            summation += i
-        return summation/self.dataSize
-
-    def GeometricAverage(self):
-        product = 1
-        for i in self.dataBase:
-            product *= i
-        return round(product**(1/self.dataSize), 2)
-
-    def HarmonicAverage(self):
-        summation = 0
-        for i in self.dataBase:
-            summation += 1/i
-        return round((self.dataSize/summation), 2)
-
-    def Median(self):
-        self.dataBase.sort()
-        if (self.dataSize % 2) == 0:
-            med = self.dataSize // 2
-            return round((self.dataBase[med]+self.dataBase[med+1]), 2)
-        else:
-            med = (self.dataSize+1) // 2
-            return self.dataBase[med-1]
-
-    def Variance(self):
-        average = self.ArithmeticAverage()
-        summation = 0
-        for i in self.dataBase:
-            summation += (i - average)**2
-        return summation / (self.dataSize-1)
-
-    def StandardDerivation(self):
-        return self.Variance()**(1/2)
-
     def ArithmeticAverage(self, dataBase=list, classes=False):
         summation = 0
         if classes:

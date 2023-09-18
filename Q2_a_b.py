@@ -3,7 +3,7 @@ from tools.calcs import Calcs
 redeA = []
 redeB = []
 
-with open("data/Q2.txt") as data:
+with open("data/Q2_a_b.txt") as data:
     dataLines = data.readlines()
 
     for line in dataLines:
